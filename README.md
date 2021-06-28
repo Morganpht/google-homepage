@@ -1,1 +1,1 @@
-The first task as part of The Odin Project is to visually replicate the Google homepage using html and CSS.
+The first task of The Odin Project is to visually replicate the Google homepage using html and CSS.
