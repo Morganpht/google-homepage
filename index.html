@@ -5,15 +5,26 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
         <style>
+            
+            html, body {
+                height: 100%;
+            }
+
             body {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                margin: 0;
             }
 
             .icon {
                 color: rgba(0,0,0,0.55);
                 margin: 5px 10px 5px 10px;
                 font-size: 28px;
+            }
+
+            p {
+                padding: 15px 30px;
+                margin: 0px;
             }
 
             a {
@@ -40,6 +51,9 @@
 
             nav {
                 list-style-type: none;
+                display: block;
+                background-color: rgb(240, 240, 240);
+                overflow: hidden;
             }
             
             button {
@@ -63,17 +77,23 @@
             }
 
             input {
-                border: 1;
+                border: 0;
                 width: 90%;
                 height: 70%;
                 margin: 5px;
             }
 
             .searchbar {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
                 border-radius: 50px;
                 border: 1px solid #dadce0;
                 height: 44px;
                 margin: 25px;
+                min-width: 50%;
+                max-width: 700px;
+                padding: 0 5px;
             }
 
             .searchbar:hover {
@@ -82,7 +102,7 @@
 
             #search-icon {
                 display: inline-block;
-                font-size: 30px;
+                font-size: 20px;
                 color: rgba(0,0,0,0.4);
             }
 
@@ -91,16 +111,61 @@
                 max-width: 100%;
             }
 
-            .divider {
+            .img-divider {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                height: 30%;
+            }
+
+            img {
+                position: absolute;
+                bottom: 0;
+                object-fit: none;
             }
 
             header {
                 display: inline-flex;
                 flex-direction: row;
                 justify-content: space-around;
+            }
+
+            footer {
+                background-color: #f2f2f2;
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                left: 0px;
+            }
+
+            .footer {
+                color: rgba(0,0,0,0.55);
+            }
+
+            hr {
+                margin: 0;
+                size: 1px;
+                color: rgba(0,0,0,0.2);
+            }
+
+            #footer-links {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 30px;
+            }
+
+            .divider {
+                display: flex;
+                justify-content:space-evenly;
+                align-items: center;
+            }
+
+            .divider2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             
         </style>
@@ -117,16 +182,47 @@
             </nav>
         </div>
         
-        <div class="divider">
+        <div class="img-divider">
             <img src="googlelogo.png" class="logo" alt="Google">
         </div>
         <form>
-            <div class="searchbar">
-                <i class="material-icons icon" id="search-icon">search</i>
-                <input type="text">
-            </div> 
-            <button type="button">Google Search</button>
-            <button type="button">I'm Feeling Lucky</button>
+            <div class="divider2">
+                <div class="searchbar">
+                    <i class="material-icons icon" id="search-icon">search</i>
+                    <input type="text">
+                    <i class="material-icons icon" id="search-icon">mic</i>
+                </div> 
+            </div>
+            <div class="divider">
+                <div>
+                    <button type="button">Google Search</button>
+                    <button type="button">I'm Feeling Lucky</button>
+                </div>
+            </div>
         </form>
+        <footer>
+            <p class="footer">United Kingdom</p>
+            <hr>
+            <div id="footer-links">
+                <div id="footer-left">
+                    <a href="https://www.google.com/" class="footer">Advertising</a>
+                    <a href="https://www.google.com/" class="footer">Business</a>
+                    <a href="https://www.google.com/" class="footer">How Search works</a>
+                </div>
+                <div id="footer-center">
+                    <a href="https://www.google.com/" class="footer">Carbon neutral since 2007</a>
+                </div>
+                <div id="footer-right">
+                    <a href="https://www.google.com/" class="footer">Privacy</a>
+                    <a href="https://www.google.com/" class="footer">Terms</a>
+                    <a href="https://www.google.com/" class="footer">Settings</a>
+                </div>
+            </div>
+
+            
+            
+            
+           
+        </footer>
     </body>
 </html>
