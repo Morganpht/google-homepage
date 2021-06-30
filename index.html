@@ -46,14 +46,8 @@
             }
 
             li {
-                float: left;
-            }
-
-            nav {
-                list-style-type: none;
-                display: block;
-                background-color: rgb(240, 240, 240);
-                overflow: hidden;
+               display: inline;
+               margin: auto;
             }
             
             button {
@@ -125,12 +119,6 @@
                 object-fit: none;
             }
 
-            header {
-                display: inline-flex;
-                flex-direction: row;
-                justify-content: space-around;
-            }
-
             footer {
                 background-color: #f2f2f2;
                 position: fixed;
@@ -156,6 +144,22 @@
                 padding: 15px 30px;
             }
 
+            nav {
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            .header-links {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 15px;
+                position: unset;
+            }
+
             .divider {
                 display: flex;
                 justify-content:space-evenly;
@@ -167,20 +171,32 @@
                 flex-direction: column;
                 align-items: center;
             }
-            
+
+            .icon:hover {
+                color: rgba(0,0,0,0.8);
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
         </style>
     </head>
     <body>
-        <div>
-            <nav>
-                <li><a href="https://www.google.com/">About</a></li>
-                <li><a href="https://www.google.com/">Store</a></li>
-                <li style="float:right"><i class="material-icons icon">account_circle</i></li>
-                <li style="float:right"><i class="material-icons icon">apps</i></li>
-                <li style="float:right"><a href="https://www.google.com/">Images</a></li>
-                <li style="float:right"><a href="https://www.google.com/">Gmail</a></li>
-            </nav>
-        </div>
+        <nav>
+            <div class="header-links">
+                <li><a href="">About</a></li>
+                <li><a href="">Store</a></li>
+            </div>
+            <div class="header-links">
+                <li><a href="">Gmail</a></li>
+                <li><a href="">Images</a></li>
+                <div class="icon-divider">
+                    <li><i class="material-icons icon">apps</i></li>
+                </div>
+                <div class="icon-divider">
+                    <li><i class="material-icons icon">account_circle</i></li>
+                </div>
+            </div>
+        </nav>
         
         <div class="img-divider">
             <img src="googlelogo.png" class="logo" alt="Google">
@@ -201,21 +217,21 @@
             </div>
         </form>
         <footer>
-            <p class="footer">United Kingdom</p>
+            <p class="footer" style="margin: 0 10px;">United Kingdom</p>
             <hr>
             <div id="footer-links">
                 <div id="footer-left">
-                    <a href="https://www.google.com/" class="footer">Advertising</a>
-                    <a href="https://www.google.com/" class="footer">Business</a>
-                    <a href="https://www.google.com/" class="footer">How Search works</a>
+                    <a href="" class="footer">Advertising</a>
+                    <a href="" class="footer">Business</a>
+                    <a href="" class="footer">How Search works</a>
                 </div>
                 <div id="footer-center">
-                    <a href="https://www.google.com/" class="footer">Carbon neutral since 2007</a>
+                    <a href="" class="footer">Carbon neutral since 2007</a>
                 </div>
                 <div id="footer-right">
-                    <a href="https://www.google.com/" class="footer">Privacy</a>
-                    <a href="https://www.google.com/" class="footer">Terms</a>
-                    <a href="https://www.google.com/" class="footer">Settings</a>
+                    <a href="" class="footer">Privacy</a>
+                    <a href="" class="footer">Terms</a>
+                    <a href="" class="footer">Settings</a>
                 </div>
             </div>
 
